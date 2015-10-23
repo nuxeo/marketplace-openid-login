@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package type="addon" name="openid-authentication" version="@VERSION@">
+  <title>OpenID Authentication</title>
+  <description>Enable OpenID Authentication in Nuxeo</description>
+  <vendor>Nuxeo</vendor>
+  <classifier>Open Source</classifier>
+  <home-page>https://doc.nuxeo.com/x/1BM5AQ
+  </home-page>
+  <platforms>
+    <platform>cap-7.4</platform>
+    <platform>cap-@DISTRIB_VERSION@</platform>
+  </platforms>
+  <nuxeo-validation>nuxeo_certified</nuxeo-validation>
+  <license>LGPL</license>
+  <license-url>http://www.gnu.org/licenses/lgpl.html</license-url>
+  <supported>true</supported>
+  <production-state>production_ready</production-state>
+  <license>LGPL 2.1</license>
+  <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
+  <visibility>PUBLIC</visibility>
+</package>

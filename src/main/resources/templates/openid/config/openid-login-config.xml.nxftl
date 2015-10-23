@@ -1,0 +1,21 @@
+<#escape x as x?xml>
+<?xml version="1.0"?>
+<component name="sample.openid.config">
+    <#if "${nuxeo.openid.name}" != "">
+      <require>org.nuxeo.ecm.platform.oauth2.openid.amazon</require>
+      <require>org.nuxeo.ecm.platform.oauth2.openid.facebook</require>
+      <require>org.nuxeo.ecm.platform.oauth2.openid.github</require>
+      <require>org.nuxeo.ecm.platform.oauth2.openid.google</require>
+      <require>org.nuxeo.ecm.platform.oauth2.openid.linkedin</require>
+
+      <extension target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry"
+                 point="providers">
+        <provider>
+          <name>${nuxeo.openid.name}</name>
+          <clientId>${nuxeo.openid.id}</clientId>
+          <clientSecret>${nuxeo.openid.secret}</clientSecret>
+        </provider>
+      </extension>
+    </#if>
+</component>
+</#escape>
