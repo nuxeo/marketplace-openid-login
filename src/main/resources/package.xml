@@ -7,8 +7,8 @@
   <home-page>https://doc.nuxeo.com/x/1BM5AQ
   </home-page>
   <platforms>
-    <platform>cap-7.4</platform>
     <platform>cap-@DISTRIB_VERSION@</platform>
+    <platform>cap-@DISTRIB_VERSION@-HF*</platform>
   </platforms>
   <nuxeo-validation>nuxeo_certified</nuxeo-validation>
   <license>LGPL</license>

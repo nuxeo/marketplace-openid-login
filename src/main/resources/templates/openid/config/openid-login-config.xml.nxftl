@@ -1,19 +1,83 @@
 <#escape x as x?xml>
 <?xml version="1.0"?>
-<component name="sample.openid.config">
-    <#if "${nuxeo.openid.name}" != "">
+<component name="org.nuxeo.marketplace.openid.config">
+
+    <#if "${nuxeo.openid.github.client.id}" != "">
+      <extension target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry"
+                 point="providers">
+        <require>org.nuxeo.ecm.platform.oauth2.openid.github</require>
+
+        <provider>
+          <name>ConnectGithubAuth</name>
+          <clientId>${nuxeo.openid.github.client.id}</clientId>
+          <clientSecret>${nuxeo.openid.github.client.secret}</clientSecret>
+        </provider>
+      </extension>
+    </#if>
+
+    <#if "${nuxeo.openid.google.client.id}" != "">
+      <extension target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry"
+                 point="providers">
+        <require>org.nuxeo.ecm.platform.oauth2.openid.google</require>
+
+        <provider>
+          <name>GoogleOpenIDConnect</name>
+          <clientId>${nuxeo.openid.google.client.id}</clientId>
+          <clientSecret>${nuxeo.openid.google.client.secret}</clientSecret>
+        </provider>
+      </extension>
+    </#if>
+
+    <#if "${nuxeo.openid.googleplus.client.id}" != "">
+      <extension target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry"
+                 point="providers">
+        <require>org.nuxeo.ecm.platform.oauth2.openid.google</require>
+
+        <provider>
+          <name>GooglePlusOpenIDConnect</name>
+          <clientId>${nuxeo.openid.googleplus.client.id}</clientId>
+          <clientSecret>${nuxeo.openid.googleplus.client.secret}</clientSecret>
+        </provider>
+      </extension>
+    </#if>
+
+    <#if "${nuxeo.openid.linkedin.client.id}" != "">
+      <extension target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry"
+                 point="providers">
+        <require>org.nuxeo.ecm.platform.oauth2.openid.linkedin</require>
+
+        <provider>
+          <name>LinkedInConnect</name>
+          <clientId>${nuxeo.openid.linkedin.client.id}</clientId>
+          <clientSecret>${nuxeo.openid.linkedin.client.secret}</clientSecret>
+        </provider>
+      </extension>
+    </#if>
+
+    <#if "${nuxeo.openid.amazon.client.id}" != "">
+      <!-- Amazon provider contribution -->
       <require>org.nuxeo.ecm.platform.oauth2.openid.amazon</require>
-      <require>org.nuxeo.ecm.platform.oauth2.openid.facebook</require>
-      <require>org.nuxeo.ecm.platform.oauth2.openid.github</require>
-      <require>org.nuxeo.ecm.platform.oauth2.openid.google</require>
-      <require>org.nuxeo.ecm.platform.oauth2.openid.linkedin</require>
 
       <extension target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry"
                  point="providers">
         <provider>
-          <name>${nuxeo.openid.name}</name>
-          <clientId>${nuxeo.openid.id}</clientId>
-          <clientSecret>${nuxeo.openid.secret}</clientSecret>
+          <name>Amazon</name>
+          <clientId>${nuxeo.openid.amazon.client.id}</clientId>
+          <clientSecret>${nuxeo.openid.amazon.client.secret}</clientSecret>
+        </provider>
+      </extension>
+    </#if>
+
+    <#if "${nuxeo.openid.facebook.client.id}" != "">
+      <!-- Facebook coonect provider contribution -->
+      <require>org.nuxeo.ecm.platform.oauth2.openid.facebook</require>
+
+      <extension target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry"
+                 point="providers">
+        <provider>
+          <name>FacebookConnect</name>
+          <clientId>${nuxeo.openid.facebook.client.id}</clientId>
+          <clientSecret>${nuxeo.openid.facebook.client.secret}</clientSecret>
         </provider>
       </extension>
     </#if>
