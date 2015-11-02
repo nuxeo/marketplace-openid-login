@@ -11,8 +11,6 @@
     <platform>cap-@DISTRIB_VERSION@-HF*</platform>
   </platforms>
   <nuxeo-validation>nuxeo_certified</nuxeo-validation>
-  <license>LGPL</license>
-  <license-url>http://www.gnu.org/licenses/lgpl.html</license-url>
   <supported>true</supported>
   <production-state>production_ready</production-state>
   <license>LGPL 2.1</license>

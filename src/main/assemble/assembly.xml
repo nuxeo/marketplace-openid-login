@@ -1,4 +1,4 @@
-<project name="shibboleth-assembly" default="build" xmlns:nx="urn:nuxeo-build" xmlns:artifact="urn:nuxeo-artifact">
+<project name="openid-login-assembly" default="build" xmlns:nx="urn:nuxeo-build" xmlns:artifact="urn:nuxeo-artifact">
   <taskdef resource="org/nuxeo/build/antlib.xml" uri="urn:nuxeo-build" />
   <taskdef resource="org/nuxeo/build/artifact/antlib.xml" uri="urn:nuxeo-artifact" />
 
@@ -16,10 +16,7 @@
 
     <copy todir="${maven.project.build.directory}/marketplace/install/bundles">
       <artifact:file key="org.nuxeo.ecm.platform:nuxeo-platform-login-openid" />
-    </copy>
-
-    <copy todir="${maven.project.build.directory}/marketplace/install/bundles">
-      <artifact:resolveFile key="org.nuxeo.ecm.platform:nuxeo-usermapper::jar" />
+      <artifact:resolveFile key="org.nuxeo.ecm.platform:nuxeo-usermapper" />
     </copy>
 
     <zip destfile="${maven.project.build.directory}/${maven.project.artifactId}-${maven.project.version}.zip"
