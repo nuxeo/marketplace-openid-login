@@ -8,7 +8,7 @@
 
   <groupId>org.nuxeo.ecm.platform</groupId>
   <artifactId>marketplace-openid-login</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>zip</packaging>
   <name>OpenID Login</name>
 
