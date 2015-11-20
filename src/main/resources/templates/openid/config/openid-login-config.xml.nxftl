@@ -3,10 +3,11 @@
 <component name="org.nuxeo.marketplace.openid.config">
 
     <#if "${nuxeo.openid.github.client.id}" != "">
+      <!-- GitHub provider contribution -->
+      <require>org.nuxeo.ecm.platform.oauth2.openid.github</require>
+
       <extension target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry"
                  point="providers">
-        <require>org.nuxeo.ecm.platform.oauth2.openid.github</require>
-
         <provider>
           <name>ConnectGithubAuth</name>
           <clientId>${nuxeo.openid.github.client.id}</clientId>
@@ -16,10 +17,11 @@
     </#if>
 
     <#if "${nuxeo.openid.google.client.id}" != "">
+      <!-- Google+ provider contribution -->
+      <require>org.nuxeo.ecm.platform.oauth2.openid.google</require>
+
       <extension target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry"
                  point="providers">
-        <require>org.nuxeo.ecm.platform.oauth2.openid.google</require>
-
         <provider>
           <name>GoogleOpenIDConnect</name>
           <clientId>${nuxeo.openid.google.client.id}</clientId>
@@ -29,10 +31,11 @@
     </#if>
 
     <#if "${nuxeo.openid.googleplus.client.id}" != "">
+      <!-- Google+ provider contribution -->
+      <require>org.nuxeo.ecm.platform.oauth2.openid.google</require>
+
       <extension target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry"
                  point="providers">
-        <require>org.nuxeo.ecm.platform.oauth2.openid.google</require>
-
         <provider>
           <name>GooglePlusOpenIDConnect</name>
           <clientId>${nuxeo.openid.googleplus.client.id}</clientId>
@@ -42,10 +45,11 @@
     </#if>
 
     <#if "${nuxeo.openid.linkedin.client.id}" != "">
+      <!-- LinkedIn contribution -->
+      <require>org.nuxeo.ecm.platform.oauth2.openid.linkedin</require>
+
       <extension target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry"
                  point="providers">
-        <require>org.nuxeo.ecm.platform.oauth2.openid.linkedin</require>
-
         <provider>
           <name>LinkedInConnect</name>
           <clientId>${nuxeo.openid.linkedin.client.id}</clientId>
