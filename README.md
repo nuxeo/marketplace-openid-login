@@ -1,6 +1,6 @@
 # OpenID Login Nuxeo Package
 
-Nuxeo package for the OpenID authentication plugin that can handle [Amazon login](https://login.amazon.com/), [Github](https://developer.github.com/v3/oauth/), [Google](https://developers.google.com/identity/protocols/OAuth2), [Google+](https://developers.google.com/+/web/api/rest/oauth), [LinkedIn](https://developer.linkedin.com/docs/oauth2) and [Facebook](https://developers.facebook.com/docs/facebook-login).
+Nuxeo package for the OpenID authentication plugin that can handle [Amazon login](https://login.amazon.com/), [GitHub](https://developer.github.com/v3/oauth/), [Google](https://developers.google.com/identity/protocols/OAuth2), [Google+](https://developers.google.com/+/web/api/rest/oauth), [LinkedIn](https://developer.linkedin.com/docs/oauth2) and [Facebook](https://developers.facebook.com/docs/facebook-login).
 
 ## Manual Configuration after Package Installation
 
