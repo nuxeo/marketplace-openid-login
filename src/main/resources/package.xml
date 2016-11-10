@@ -7,8 +7,8 @@
   <home-page>https://doc.nuxeo.com/x/1BM5AQ
   </home-page>
   <platforms>
-    <platform>cap-@DISTRIB_VERSION@</platform>
-    <platform>cap-@DISTRIB_VERSION@-HF*</platform>
+    <platform>server-@DISTRIB_VERSION@</platform>
+    <platform>server-@DISTRIB_VERSION@-*</platform>
   </platforms>
   <nuxeo-validation>nuxeo_certified</nuxeo-validation>
   <supported>true</supported>
